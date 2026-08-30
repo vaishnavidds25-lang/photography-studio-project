@@ -1,41 +1,77 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Aperture Photography Studio - Digital Marketing Strategy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aperture Photography Studio - TAE-I Project</title>
     <style>
-        body{margin:0;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background:#f4f6f9;color:#222;line-height:1.6}
-        header{background:linear-gradient(135deg, #1f1c2c, #928dab);color:#fff;text-align:center;padding:50px 5%}
-        h1{font-size:38px;margin:0;letter-spacing:1px}
-        header p{font-size:16px;opacity:0.9;margin:8px 0 0}
-        nav{background:#fff;padding:12px;text-align:center;position:sticky;top:0;box-shadow:0 4px 10px rgba(0,0,0,0.05);z-index:100}
-        nav a{margin:0 12px;color:#1f1c2c;text-decoration:none;font-weight:600;font-size:14px;transition:0.3s}
-        nav a:hover{color:#e94560}
-        section{max-width:980px;margin:35px auto;padding:35px;background:#fff;border-radius:12px;box-shadow:0 2px 15px rgba(0,0,0,0.03)}
-        h2{color:#1f1c2c;border-bottom:3px solid #e94560;padding-bottom:8px;font-size:24px;display:inline-block}
-        h3{color:#333;margin-top:20px}
-        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:15px}
-        .card{border:1px solid #e1e8ed;border-radius:10px;padding:18px;background:#fafbfc}
-        .badge{display:inline-block;background:#ffeef0;border:1px solid #ffc2c7;padding:6px 12px;margin:4px;border-radius:20px;color:#d63031;font-size:13px;font-weight:600}
-        table{width:100%;border-collapse:collapse;margin-top:15px}
-        th,td{padding:12px 15px;border-bottom:1px solid #eef2f5;text-align:left}
-        th{background:#f8f9fa;color:#1f1c2c}
-        .ad-box{padding:30px;border-radius:12px;text-align:center;border:2px dashed #e94560;background:#fff5f6;margin-top:15px}
-        .offer{font-size:28px;font-weight:bold;color:#e94560;margin:10px 0}
-        .btn{display:inline-block;padding:12px 25px;background:#e94560;color:#fff;text-decoration:none;border-radius:6px;font-weight:bold;margin-top:12px}
-        .code-block{background:#f1f3f5;padding:15px;border-left:4px solid #1f1c2c;font-family:monospace;margin-top:10px;border-radius:4px}
-        ol li, ul li{margin-bottom:10px}
-        footer{background:#1f1c2c;color:#fff;text-align:center;padding:30px;margin-top:50px}
+        :root {
+            --primary: #1a1a2e;
+            --accent: #e94560;
+            --bg: #f8f9fa;
+            --text: #2b2b2b;
+            --card-bg: #ffffff;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg); color: var(--text); line-height: 1.6; }
+
+        /* Header / Banner */
+        header { background: linear-gradient(rgba(26,26,46,0.85), rgba(26,26,46,0.85)), url('https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=1200') center/cover; color: #fff; text-align: center; padding: 70px 20px; }
+        header h1 { font-size: 42px; margin-bottom: 10px; font-weight: 700; }
+        header p { font-size: 18px; color: #ddd; max-width: 600px; margin: 0 auto; }
+        .hero-btn { display: inline-block; background: var(--accent); color: #fff; text-decoration: none; padding: 12px 28px; border-radius: 25px; margin-top: 20px; font-weight: bold; transition: 0.3s; }
+        .hero-btn:hover { background: #c82333; }
+
+        /* Navigation */
+        nav { background: var(--primary); padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav a { color: #fff; text-decoration: none; margin: 0 12px; font-size: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+
+        /* Sections */
+        section { max-width: 1100px; margin: 40px auto; padding: 35px 25px; background: var(--card-bg); border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h2 { color: var(--primary); font-size: 28px; margin-bottom: 20px; text-align: center; position: relative; padding-bottom: 10px; }
+        h2::after { content: ''; width: 60px; height: 3px; background: var(--accent); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
+
+        /* Grids */
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; margin-top: 25px; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin-top: 25px; }
+
+        /* Cards */
+        .card { background: #fff; border: 1px solid #eee; border-radius: 10px; overflow: hidden; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+        .card img { width: 100%; height: 180px; object-fit: cover; }
+        .card-content { padding: 18px; }
+        .card-content h3 { font-size: 18px; color: var(--primary); margin-bottom: 8px; }
+        .card-content p { font-size: 14px; color: #666; }
+
+        /* Badges */
+        .badge { display: inline-block; background: #ffeef0; color: var(--accent); padding: 6px 14px; margin: 5px; border-radius: 20px; font-size: 13px; font-weight: 600; border: 1px solid #ffc2c7; }
+
+        /* Visual Social Media Cards */
+        .social-card { background: #fff; border-radius: 12px; border: 1px solid #e2e8f0; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        .social-card img { width: 100%; height: 220px; object-fit: cover; }
+        .social-info { padding: 15px; }
+        .platform-tag { display: inline-block; background: var(--primary); color: #fff; padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: bold; margin-bottom: 8px; text-transform: uppercase; }
+
+        /* Visual Ad Section */
+        .ad-banner { background: linear-gradient(135deg, #1f1c2c, #928dab); color: white; padding: 40px; border-radius: 12px; text-align: center; margin-top: 20px; position: relative; overflow: hidden; }
+        .ad-banner h3 { font-size: 32px; color: #ff2e63; margin-bottom: 10px; font-weight: bold; }
+        .ad-banner p { font-size: 16px; margin-bottom: 15px; }
+
+        /* Suggestions List */
+        .suggestion-item { display: flex; align-items: flex-start; gap: 15px; padding: 15px; background: #fdfdfd; border: 1px solid #f0f0f0; border-radius: 8px; margin-bottom: 12px; }
+        .suggestion-icon { background: #ffeef0; color: var(--accent); padding: 10px 14px; border-radius: 50%; font-weight: bold; font-size: 18px; }
+
+        footer { background: var(--primary); color: #fff; text-align: center; padding: 30px; margin-top: 50px; font-size: 14px; }
     </style>
 </head>
 <body>
 
 <header>
-    <div style="font-size:50px">📸</div>
     <h1>Aperture Photography Studio</h1>
-    <p>Digital Marketing Strategy for Increasing Online Client Bookings</p>
-    <p><b>TAE-I Project Based Learning</b></p>
+    <p>"Capturing Timeless Moments into Cinematic Stories"</p>
+    <a href="#ad" class="hero-btn">Explore Special Offers</a>
 </header>
 
 <nav>
@@ -43,132 +79,207 @@
     <a href="#audience">Target Audience</a>
     <a href="#seo">SEO Strategy</a>
     <a href="#social">Social Media</a>
-    <a href="#ad">Ad Strategy</a>
-    <a href="#email">Email Marketing</a>
-    <a href="#improve">Suggestions</a>
+    <a href="#ad">Ad Design</a>
+    <a href="#email">Email Campaign</a>
+    <a href="#suggestions">Suggestions</a>
 </nav>
 
 <!-- 1. Business Profile -->
 <section id="business">
     <h2>1. Business Profile</h2>
-    <div class="grid">
-        <div class="card"><b>Business Name</b><br>Aperture Photography Studio</div>
-        <div class="card"><b>Type of Business</b><br>Creative Media & Event Photography Studio</div>
-        <div class="card"><b>Location</b><br>Nagpur (Local & Destination Coverage)</div>
-        <div class="card"><b>Core Services</b><br>Pre-Wedding & Weddings, Portraits, Baby Shoots, Commercial/Product Photography</div>
+    <div class="grid-4">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500" alt="Studio">
+            <div class="card-content">
+                <h3>Aperture Studios</h3>
+                <p><b>Type:</b> Professional Photography & Videography Studio based in Nagpur.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=500" alt="Services">
+            <div class="card-content">
+                <h3>Services</h3>
+                <p>Weddings, Pre-wedding shoots, Maternity, Baby milestones & Commercial products.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?w=500" alt="USP">
+            <div class="card-content">
+                <h3>Our USP</h3>
+                <p>Cinematic drone coverage, 4K editing, transparent packages & fast delivery.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=500" alt="Objective">
+            <div class="card-content">
+                <h3>Main Objective</h3>
+                <p>Increase online client inquiries and boost photoshoot bookings by 40%.</p>
+            </div>
+        </div>
     </div>
-    <p style="margin-top: 15px;"><b>Objective:</b> To develop a highly targeted digital marketing strategy that increases brand visibility, builds trust through visual proof, and boosts online shoot bookings by 40%.</p>
 </section>
 
 <!-- 2. Target Audience -->
 <section id="audience">
     <h2>2. Target Audience</h2>
-    <p>Identifying key potential clients looking for professional photography services:</p>
-    <table>
-        <tr><th>Customer Segment</th><th>Age Group</th><th>Needs & Pain Points</th></tr>
-        <tr><td>Engaged Couples</td><td>22–32 years</td><td>High-end cinematic pre-wedding videos, creative wedding albums, memorable storytelling.</td></tr>
-        <tr><td>Parents & Families</td><td>25–45 years</td><td>Newborn safety-focused shoots, birthday event coverage, long-lasting family portraits.</td></tr>
-        <tr><td>Local Brands & Sellers</td><td>20–50 years</td><td>High-resolution product catalog photos for Amazon/Flipkart, social media aesthetic shots.</td></tr>
-        <tr><td>Models & Influencers</td><td>18–35 years</td><td>Personal branding portfolios, headshots, fast turn-around time for edited images.</td></tr>
-    </table>
-    <p><b>Target Location:</b> Nagpur city and surrounding regional areas (within 100 km radius).</p>
+    <div class="grid-4">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=500" alt="Couples">
+            <div class="card-content">
+                <h3>Engaged Couples</h3>
+                <p><b>Age:</b> 22-32 yrs<br>Looking for aesthetic pre-wedding and cinematic wedding shoots.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=500" alt="Families">
+            <div class="card-content">
+                <h3>Parents & Families</h3>
+                <p><b>Age:</b> 25-45 yrs<br>Interested in maternity shoots, baby portraits & birthday events.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Businesses">
+            <div class="card-content">
+                <h3>Local Businesses</h3>
+                <p><b>Age:</b> 20-50 yrs<br>Require professional product photography for Amazon & Instagram cataloging.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500" alt="Models">
+            <div class="card-content">
+                <h3>Models / Creators</h3>
+                <p><b>Age:</b> 18-35 yrs<br>Need personal branding, fashion headshots, and portfolio updates.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<!-- 3. SEO Keyword Strategy -->
+<!-- 3. SEO Keywords Strategy -->
 <section id="seo">
     <h2>3. SEO Keyword Strategy</h2>
-    <p>Optimizing organic search presence to catch clients actively searching for photographers.</p>
-    
-    <h3>Primary Keywords</h3>
-    <span class="badge">best photography studio in Nagpur</span>
-    <span class="badge">wedding photographer Nagpur</span>
-    <span class="badge">pre wedding shoot Nagpur</span>
-    <span class="badge">portrait studio near me</span>
-
-    <h3>Long-Tail Keywords</h3>
-    <span class="badge">affordable pre wedding photographer in Nagpur</span>
-    <span class="badge">best maternity photoshoot studio near me</span>
-    <span class="badge">e-commerce product photography cost Nagpur</span>
-
-    <h3>SEO Implementation Strategy</h3>
-    <ul>
-        <li><b>On-Page SEO:</b> Using localized title tags like <i>"Best Wedding & Portrait Photographer in Nagpur | Aperture Studio"</i>. Writing clear alt-texts on photo galleries (e.g., <code>pre-wedding-shoot-nagpur.jpg</code>).</li>
-        <li><b>Off-Page SEO:</b> Setting up a verified Google Business Profile, submitting to local wedding directories (WedMeGood, ShaadiSaga), and collecting high-rating client reviews.</li>
-    </ul>
+    <p style="text-align:center; margin-bottom: 15px;">Targeting local intent search terms to rank #1 on Google Local Map Pack:</p>
+    <div style="text-align: center; margin-bottom: 25px;">
+        <span class="badge">best photography studio in Nagpur</span>
+        <span class="badge">wedding photographer near me</span>
+        <span class="badge">pre wedding shoot price Nagpur</span>
+        <span class="badge">maternity photoshoot studio</span>
+        <span class="badge">commercial product photographer</span>
+        <span class="badge">portrait studio Nagpur</span>
+    </div>
+    <div class="grid-2">
+        <div style="padding: 15px; background:#f9f9f9; border-radius: 8px;">
+            <h3 style="color:var(--primary); margin-bottom:10px;">On-Page SEO</h3>
+            <p>• Optimized Meta Titles: <i>"Best Wedding Photographer in Nagpur | Aperture Studio"</i></p>
+            <p>• Gallery Image Alt Tags: <code>pre-wedding-cinematic-shoot.jpg</code></p>
+            <p>• Schema Markup for Local Business.</p>
+        </div>
+        <div style="padding: 15px; background:#f9f9f9; border-radius: 8px;">
+            <h3 style="color:var(--primary); margin-bottom:10px;">Off-Page SEO</h3>
+            <p>• Optimized Google Business Profile with 5-star customer ratings.</p>
+            <p>• Listing on WedMeGood, ShaadiSaga, and local directories.</p>
+            <p>• Backlinks from local event blogs.</p>
+        </div>
+    </div>
 </section>
 
-<!-- 4. Social Media Marketing Plan -->
+<!-- 4. Digitized Social Media Marketing Plan -->
 <section id="social">
     <h2>4. Social Media Marketing Plan</h2>
-    <table>
-        <tr><th>Platform</th><th>Content Focus</th><th>Objective</th></tr>
-        <tr><td>Instagram</td><td>Reels (Behind-The-Scenes, Color Grading transformations), Carousel Portfolios</td><td>Drive inquiries via Direct Messages (DMs)</td></tr>
-        <tr><td>Facebook</td><td>Full event photo albums, client video testimonials, seasonal packages</td><td>Reach parents, couples, & local business owners</td></tr>
-        <tr><td>Pinterest</td><td>Theme-based boards (Pre-wedding posing ideas, aesthetic studio setups)</td><td>Inspire brides-to-be and build visual authority</td></tr>
-    </table>
+    <p style="text-align: center; margin-bottom: 20px;">Visual Campaign Creatives Designed for Multi-Platform Outreach:</p>
+    
+    <div class="grid-4">
+        <div class="social-card">
+            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=500" alt="Instagram Campaign">
+            <div class="social-info">
+                <span class="platform-tag" style="background: #e1306c;">Instagram Reel</span>
+                <h3>Behind-The-Scenes</h3>
+                <p><b>Content:</b> Photo transformation reel (Raw vs Edited) to show post-processing magic.</p>
+            </div>
+        </div>
 
-    <h3>Sample Weekly Content Calendar</h3>
-    <div class="grid">
-        <div class="card"><b>Monday</b><br>Client Testimonial + Final Edit Post</div>
-        <div class="card"><b>Wednesday</b><br>BTS Reel (Lighting & Camera Setup)</div>
-        <div class="card"><b>Friday</b><br>Before vs After Editing Reel</div>
-        <div class="card"><b>Sunday</b><br>Weekly Portfolio Showcase & Story Offer</div>
+        <div class="social-card">
+            <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=500" alt="Facebook Post">
+            <div class="social-info">
+                <span class="platform-tag" style="background: #4267B2;">Facebook Post</span>
+                <h3>Full Event Albums</h3>
+                <p><b>Content:</b> Showcase full wedding stories, client video feedback, and seasonal discount posts.</p>
+            </div>
+        </div>
+
+        <div class="social-card">
+            <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=500" alt="WhatsApp Graphic">
+            <div class="social-info">
+                <span class="platform-tag" style="background: #25D366;">WhatsApp Direct</span>
+                <h3>Instant Quotes & Offers</h3>
+                <p><b>Content:</b> Direct PDF brochure sharing, booking reminders, and exclusive family package updates.</p>
+            </div>
+        </div>
+
+        <div class="social-card">
+            <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=500" alt="YouTube Thumbnail">
+            <div class="social-info">
+                <span class="platform-tag" style="background: #FF0000;">YouTube Video</span>
+                <h3>Cinematic Teasers</h3>
+                <p><b>Content:</b> 4K wedding films, lighting tutorial clips, and photography gear reviews.</p>
+            </div>
+        </div>
     </div>
 </section>
 
-<!-- 5. Advertisement Strategy -->
+<!-- 5. Advertisement Design -->
 <section id="ad">
-    <h2>5. Advertisement Strategy</h2>
-    <p>Targeted paid ad campaigns to convert visual interest into instant bookings.</p>
-
-    <div class="ad-box">
-        <p style="font-size: 14px; font-weight: bold; color: #666; letter-spacing: 1px;">INSTAGRAM / FACEBOOK SPONSORED AD</p>
-        <div class="offer">FLAT 20% OFF ON YOUR FIRST SHOOT BOOKING! 📸</div>
-        <p>Make your special moments unforgettable with cinematic quality, premium drone shots & expert editing.</p>
-        <p><b>Weddings | Pre-Weddings | Maternity | Commercial Shoots</b></p>
-        <a href="#" class="btn">Book Your Slot Today</a>
-    </div>
-
-    <h3>Google Search Ad Concept (SEM)</h3>
-    <p>When someone searches <i>"best wedding photographer near me"</i>, our ad appears on top:</p>
-    <div class="code-block">
-        <b>Aperture Photography Studio – Premier Photography in Nagpur</b><br>
-        Book Top-Rated Photographers for Weddings, Events & Portraits. Get 20% Off Festive Discount!<br>
-        <u>www.aperturestudios.com/book-now</u>
+    <h2>5. Advertisement Design</h2>
+    <div class="ad-banner">
+        <h3>LIMITED TIME FESTIVE OFFER! 📸</h3>
+        <p style="font-size: 22px; font-weight: bold;">FLAT 20% OFF ON YOUR FIRST BOOKING</p>
+        <p>Book your Pre-Wedding or Event shoot this month and get 5 Printed Canvas Frames FREE!</p>
+        <a href="#email" class="hero-btn" style="background: #ff2e63;">Reserve Your Date Now</a>
     </div>
 </section>
 
-<!-- 6. Email Marketing Strategy -->
+<!-- 6. Email Marketing Campaign -->
 <section id="email">
-    <h2>6. Email Marketing Strategy</h2>
-    <div class="card">
-        <h3>Subject: 📸 Capture Your Memories + Exclusive 20% Discount Offer!</h3>
+    <h2>6. Email Marketing Campaign</h2>
+    <div style="background: #fdfdfd; border: 1px dashed var(--accent); padding: 25px; border-radius: 10px;">
+        <p style="font-weight: bold; font-size: 16px; margin-bottom: 10px;">Subject: 📸 Make Your Memories Unforgettable + 20% Off Inside!</p>
         <p>Dear Client,</p>
-        <p>Are you planning a wedding, an upcoming birthday, or looking for a professional portfolio shoot?</p>
-        <p><b>Aperture Photography Studio</b> brings high-end cinematic equipment, artistic framing, and creative editing to make your moments truly timeless.</p>
-        <p><b>Why Choose Aperture Studios?</b></p>
-        <ul>
-            <li>State-of-the-art studio setup & high-res cameras</li>
-            <li>Customized thematic shoot packages</li>
-            <li>Fast delivery of edited photos & cinematic videos</li>
-        </ul>
-        <p><b>Exclusive Offer:</b> Reserve your photoshoot date this month and claim <b>20% OFF</b> plus 5 complimentary framed prints!</p>
-        <p><a href="#" class="btn">Reserve Your Date Now</a></p>
-        <p>Warm regards,<br><b>Aperture Photography Team</b></p>
+        <p>Planning a special wedding, maternity, or personal branding shoot soon?</p>
+        <p>At <b>Aperture Photography Studio</b>, we capture your genuine emotion with premium cinematic lenses and professional drone gear.</p>
+        <p><b>Special Monthly Package Includes:</b></p>
+        <p>✅ High-Res Edited Photos | ✅ 4K Video Teaser | ✅ Free Photo Album Print</p>
+        <p style="margin-top: 15px;"><a href="#" class="hero-btn" style="padding: 8px 20px; font-size: 14px;">Claim Your 20% Offer</a></p>
     </div>
 </section>
 
 <!-- 7. Business Improvement Suggestions -->
-<section id="improve">
+<section id="suggestions">
     <h2>7. Business Improvement Suggestions</h2>
-    <ol>
-        <li><b>Optimize Google Business Profile:</b> Actively collect 5-star reviews with photo feedback from happy clients to dominate local Google search.</li>
-        <li><b>WhatsApp Automation Chatbot:</b> Add a direct WhatsApp chat button on the website to send instant price quotes and PDF brochures.</li>
-        <li><b>Behind-The-Scenes (BTS) Short Videos:</b> Leverage Instagram Reels showing shoot fun and transparent working methods to build trust.</li>
-        <li><b>Referral Discount Incentive:</b> Offer existing clients ₹1,000 credit or a free canvas print for every friend they refer who books a shoot.</li>
-        <li><b>Seasonal & Festival Bundles:</b> Create tailored packages for peak wedding seasons, Valentine's Day, and Diwali commercial cataloging.</li>
-        <li><b>Track Campaign Performance Metrics:</b> Monitor Instagram Reel reach, Google Ad click-through rates (CTR), monthly website inquiries, and booking conversions.</li>
-    </ol>
+    <div style="margin-top: 20px;">
+        <div class="suggestion-item">
+            <div class="suggestion-icon">1</div>
+            <div>
+                <b>Automated WhatsApp Chatbot:</b> Integrate instant WhatsApp chat on website for quick price quote generation.
+            </div>
+        </div>
+        <div class="suggestion-item">
+            <div class="suggestion-icon">2</div>
+            <div>
+                <b>Google My Business Optimization:</b> Collect video reviews from happy couples to build strong local social proof.
+            </div>
+        </div>
+        <div class="suggestion-item">
+            <div class="suggestion-icon">3</div>
+            <div>
+                <b>Client Referral Scheme:</b> Give a ₹1,000 photo print voucher to existing clients who refer friends.
+            </div>
+        </div>
+        <div class="suggestion-item">
+            <div class="suggestion-icon">4</div>
+            <div>
+                <b>Instagram Reels Focus:</b> Consistently post "Before vs After Photo Editing" videos to increase reach exponentially.
+            </div>
+        </div>
+    </div>
 </section>
 
 <footer>
@@ -178,4 +289,3 @@
 
 </body>
 </html>
-
