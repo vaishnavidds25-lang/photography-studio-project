@@ -33,15 +33,16 @@
         h2 { color: var(--primary); font-size: 26px; margin-bottom: 25px; text-align: center; position: relative; padding-bottom: 10px; }
         h2::after { content: ''; width: 60px; height: 3px; background: var(--accent); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); }
 
-        /* 1. Business Profile (1 Picture + Detailed Content) */
-        .biz-container { display: flex; flex-wrap: wrap; gap: 30px; align-items: center; }
-        .biz-image { flex: 1; min-width: 300px; }
-        .biz-image img { width: 100%; height: 380px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
-        .biz-details { flex: 1.5; min-width: 300px; }
-        .biz-info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px; margin-top: 15px; }
-        .info-box { background: #f9fafb; border-left: 4px solid var(--accent); padding: 15px; border-radius: 6px; }
-        .info-box h4 { color: var(--primary); font-size: 16px; margin-bottom: 5px; }
-        .info-box p { font-size: 13px; color: #4b5563; }
+        /* 1. Business Profile (1 Image + Business Contact Details + Map) */
+        .biz-container { display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start; }
+        .biz-image { flex: 1; min-width: 280px; }
+        .biz-image img { width: 100%; height: 340px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .biz-details { flex: 1.2; min-width: 280px; }
+        .contact-card { background: #f9fafb; border-left: 5px solid var(--accent); padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .contact-item { margin-bottom: 12px; font-size: 15px; }
+        .contact-item strong { color: var(--primary); font-size: 16px; display: inline-block; width: 130px; }
+        .map-box { border-radius: 10px; overflow: hidden; border: 1px solid #e5e7eb; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .map-box img { width: 100%; height: 180px; object-fit: cover; display: block; }
 
         /* 2. Target Audience */
         .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
@@ -55,7 +56,7 @@
         /* 3. SEO Badges */
         .badge { display: inline-block; background: #ffeef0; color: var(--accent); padding: 7px 15px; margin: 6px 4px; border-radius: 20px; font-size: 13px; font-weight: 600; border: 1px solid #ffc2c7; }
 
-        /* 4. Social Media Marketing Cards (Clickable) */
+        /* 4. Social Media Marketing Cards (Clickable Photography Links) */
         .social-card { background: #fff; border-radius: 12px; border: 1px solid #e5e7eb; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); text-decoration: none; color: inherit; display: block; transition: 0.3s; }
         .social-card:hover { transform: translateY(-6px); box-shadow: 0 10px 25px rgba(0,0,0,0.12); }
         .social-card img { width: 100%; height: 200px; object-fit: cover; }
@@ -105,27 +106,24 @@
             <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800" alt="Aperture Photography Studio Equipment">
         </div>
         <div class="biz-details">
-            <h3 style="font-size:22px; color:var(--primary); margin-bottom:10px;">Aperture Studio Overview</h3>
-            <p style="font-size:14px; color:#4b5563; margin-bottom:15px;">
-                Aperture Photography Studio is a premier creative media agency in Nagpur specializing in high-end visual storytelling, fashion editorial, pre-wedding cinema, and corporate product cataloging.
-            </p>
-            <div class="biz-info-grid">
-                <div class="info-box">
-                    <h4>Studio Name & Type</h4>
-                    <p><b>Aperture Studio</b> — Full-service Professional Photography & Videography Studio based in Nagpur, Maharashtra.</p>
+            <div class="contact-card">
+                <div class="contact-item">
+                    <strong>Business Name:</strong> Aperture Photography Studio
                 </div>
-                <div class="info-box">
-                    <h4>Core Services Offered</h4>
-                    <p>Wedding Cinematography, Pre-Wedding Shoots, Maternity Portraits, Baby Milestones, Fashion Portfolios, & Commercial Product Photography.</p>
+                <div class="contact-item">
+                    <strong>Email ID:</strong> contact@aperturestudio.in
                 </div>
-                <div class="info-box">
-                    <h4>Unique Selling Proposition (USP)</h4>
-                    <p>4K Cinematic Drone Coverage, Professional Studio Lighting Setup, Color-Graded Delivery within 7 Days, & Customized Packages.</p>
+                <div class="contact-item">
+                    <strong>Contact No:</strong> +91 98765 43210 / +91 71223 45678
                 </div>
-                <div class="info-box">
-                    <h4>Marketing Objectives</h4>
-                    <p>Expand brand reach across Central India, increase direct client inquiries by 40%, and build an online portfolio presence.</p>
+                <div class="contact-item">
+                    <strong>Address:</strong> Plot No. 45, West High Court Road, Dharampeth, Nagpur, Maharashtra - 440010
                 </div>
+            </div>
+
+            <div class="map-box">
+                <p style="padding:8px 12px; background:#e5e7eb; font-size:12px; font-weight:bold; color:#374151;">📍 Studio Location Map</p>
+                <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?w=800" alt="Studio Address Map Photo">
             </div>
         </div>
     </div>
@@ -197,28 +195,28 @@
 
 <section id="social">
     <h2>4. Social Media Marketing Plan</h2>
-    <p style="text-align: center; margin-bottom: 20px; font-size:14px; color:#4b5563;">Click any campaign card below to visit live social media platforms:</p>
+    <p style="text-align: center; margin-bottom: 20px; font-size:14px; color:#4b5563;">Click any photography poster card below to view live social media posts:</p>
     
     <div class="grid-4">
-        <a href="https://www.instagram.com" target="_blank" class="social-card">
-            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=500" alt="Instagram Campaign">
+        <a href="https://www.instagram.com/p/C9fA1L6M2wX/" target="_blank" class="social-card">
+            <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=500" alt="Instagram Photography Poster">
             <div class="social-info">
-                <span class="platform-tag" style="background: #e1306c;">Instagram (Click to Open)</span>
+                <span class="platform-tag" style="background: #e1306c;">Instagram Post (Click to View)</span>
                 <h3 style="font-size:16px; margin-bottom:5px;">Behind-The-Scenes Reels</h3>
-                <p style="font-size:13px; color:#6b7280;"><b>Content:</b> "Raw vs Edited" photo transformations to showcase editing skills.</p>
+                <p style="font-size:13px; color:#6b7280;"><b>Content:</b> "Raw vs Edited" wedding photo poster and lighting breakdown.</p>
             </div>
         </a>
 
-        <a href="https://www.facebook.com" target="_blank" class="social-card">
-            <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=500" alt="Facebook Campaign">
+        <a href="https://www.facebook.com/photo.php?fbid=101584950294" target="_blank" class="social-card">
+            <img src="https://images.unsplash.com/photo-1606800052052-a08af7148866?w=500" alt="Facebook Photography Poster">
             <div class="social-info">
-                <span class="platform-tag" style="background: #1877f2;">Facebook (Click to Open)</span>
+                <span class="platform-tag" style="background: #1877f2;">Facebook Post (Click to View)</span>
                 <h3 style="font-size:16px; margin-bottom:5px;">Full Wedding Albums</h3>
-                <p style="font-size:13px; color:#6b7280;"><b>Content:</b> Full event photo stories, client reviews, and seasonal discount announcements.</p>
+                <p style="font-size:13px; color:#6b7280;"><b>Content:</b> Photography portfolio post, client reviews, & seasonal offer posters.</p>
             </div>
         </a>
 
-        <a href="https://wa.me/" target="_blank" class="social-card">
+        <a href="https://wa.me/919876543210?text=Hello%20Aperture%20Studio,%20I%20want%20to%20book%20a%20photoshoot" target="_blank" class="social-card">
             <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?w=500" alt="WhatsApp Campaign">
             <div class="social-info">
                 <span class="platform-tag" style="background: #25d366;">WhatsApp Direct (Click to Chat)</span>
@@ -227,12 +225,12 @@
             </div>
         </a>
 
-        <a href="https://www.youtube.com" target="_blank" class="social-card">
+        <a href="https://www.youtube.com/results?search_query=photography+studio+teaser" target="_blank" class="social-card">
             <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?w=500" alt="YouTube Campaign">
             <div class="social-info">
-                <span class="platform-tag" style="background: #ff0000;">YouTube (Click to Open)</span>
+                <span class="platform-tag" style="background: #ff0000;">YouTube Video (Click to Watch)</span>
                 <h3 style="font-size:16px; margin-bottom:5px;">Cinematic Teasers</h3>
-                <p style="font-size:13px; color:#6b7280;"><b>Content:</b> 4K wedding trailers, lighting tutorials, and camera gear reviews.</p>
+                <p style="font-size:13px; color:#6b7280;"><b>Content:</b> 4K wedding trailers, camera gear reviews, and studio walkthroughs.</p>
             </div>
         </a>
     </div>
@@ -252,7 +250,7 @@
     <h2>6. Email Marketing Campaign</h2>
     <div class="email-client">
         <div class="email-header">
-            <div><b>From:</b> Aperture Studio &lt;offers@aperturestudio.com&gt;</div>
+            <div><b>From:</b> Aperture Studio &lt;offers@aperturestudio.in&gt;</div>
             <div><b>To:</b> Client &lt;valuable.client@gmail.com&gt;</div>
             <div><b>Date:</b> September 2026</div>
             <div><b>Subject:</b> 📸 Exclusive 20% Off + Free Canvas Print for Your Next Shoot!</div>
@@ -324,4 +322,3 @@
 
 </body>
 </html>
-
